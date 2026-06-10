@@ -1,15 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #1f2937;
   background-color: #f9fafb;
+  line-height: 1.6;
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 8%;
+  padding: 20px 8%;
   background-color: #111827;
 }
 
@@ -23,6 +35,8 @@ body {
 .nav-links {
   display: flex;
   gap: 24px;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -31,13 +45,23 @@ body {
   text-decoration: none;
 }
 
+.nav-links a:hover {
+  color: #93c5fd;
+}
+
 .hero {
   padding: 120px 8%;
   text-align: center;
+  background: linear-gradient(135deg, #dbeafe, #f9fafb);
 }
 
 .hero h1 {
-  font-size: 48px;
+  margin-bottom: 12px;
+  font-size: 52px;
+}
+
+.hero p {
+  font-size: 20px;
 }
 
 .button {
@@ -48,6 +72,10 @@ body {
   background-color: #2563eb;
   text-decoration: none;
   border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
 }
 
 .section {
@@ -89,4 +117,89 @@ body {
 .project-card a {
   color: #2563eb;
   font-weight: bold;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  color: white;
+  background-color: #111827;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 3px solid #bfdbfe;
+  border-color: #2563eb;
+}
+
+#form-message {
+  font-weight: bold;
+}
+
+.accordion {
+  max-width: 800px;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111827;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.accordion-button:hover {
+  background-color: #d1d5db;
+}
+
+.accordion-content {
+  display: none;
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.accordion-content.open {
+  display: block;
 }
