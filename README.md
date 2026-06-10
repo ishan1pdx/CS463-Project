@@ -52,10 +52,10 @@ https://github.com/ishandhar3404/Spotify-AI-Song-Recommender
 
 ## Deployment
 
-Live Site:
+Live Site: https://ishan1pdx.github.io/CS463-Project/
 
 
-GitHub Repository:
+GitHub Repository: https://github.com/ishan1pdx/CS463-Project.git
 
 
 ## Sources
